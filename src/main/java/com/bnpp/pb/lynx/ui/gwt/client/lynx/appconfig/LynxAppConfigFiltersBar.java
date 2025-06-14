@@ -3,7 +3,7 @@ package com.bnpp.pb.lynx.ui.gwt.client.lynx.appconfig;
 import com.bnpp.pb.common.coreui.gwt.client.gxt3.ui.filter.FiltersBar;
 import com.bnpp.pb.common.coreui.gwt.client.gxt3.ui.filter.StringFilter;
 
-public class LynxAppConfigFiltersBar extends FiltersBar {
+public class newFiltersBar extends FiltersBar {
     private StringFilter appIdFilter;
     private StringFilter propNameFilter;
 

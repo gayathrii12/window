@@ -6,17 +6,17 @@ import com.bnpp.pb.lynx.ui.gwt.client.AbstractLynxDataEntryForm;
 import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.widget.core.client.form.FormPanel;
 
-public class LynxAppConfigForm extends AbstractLynxDataEntryForm {
+public class newForm extends AbstractLynxDataEntryForm {
     private static final String BIZ_OBJECT = "lynx_app_config";
-    private LynxAppConfigFormFields formFields;
+    private newFormFields formFields;
     private Widget[] fieldsToDisplay;
     private FormPanel formPanel;
     private TableWindow parentWindow;
 
-    public LynxAppConfigForm(TableWindow parentWindow) {
+    public newForm(TableWindow parentWindow) {
         super();
         this.parentWindow = parentWindow;
-        formFields = new LynxAppConfigFormFields();
+        formFields = new newFormFields();
         this.fieldsToDisplay = formFields.createFields();
         setFieldsConfig(formFields);
     }

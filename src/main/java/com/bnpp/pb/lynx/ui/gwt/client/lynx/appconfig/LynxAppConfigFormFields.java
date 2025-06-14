@@ -5,14 +5,14 @@ import com.google.gwt.user.client.ui.Widget;
 import com.sencha.gxt.widget.core.client.form.FieldLabel;
 import com.sencha.gxt.widget.core.client.form.TextField;
 
-public class LynxAppConfigFormFields extends BaseFormFieldConfig {
+public class newFormFields extends BaseFormFieldConfig {
     private FieldLabel appIdField;
     private FieldLabel propTypeField;
     private FieldLabel propNameField;
     private FieldLabel propValueField;
 
-    public LynxAppConfigFormFields() {
-        setFieldNames(LynxAppConfigFieldsDef.formFieldNames);
+    public newFormFields() {
+        setFieldNames(newFieldDef.formFieldNames);
         appIdField = new FieldLabel(new TextField(), "App Id");
         propTypeField = new FieldLabel(new TextField(), "Property Type");
         propNameField = new FieldLabel(new TextField(), "Property Name");

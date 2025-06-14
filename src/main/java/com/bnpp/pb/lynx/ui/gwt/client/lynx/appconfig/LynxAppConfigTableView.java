@@ -5,12 +5,12 @@ import com.bnpp.pb.common.coreui.gwt.client.gxt3.base.BaseGridColumnConfig;
 import com.bnpp.pb.common.coreui.gwt.client.gxt3.base.BaseFieldsDef;
 import com.sencha.gxt.widget.core.client.grid.ColumnModel;
 
-public class LynxAppConfigTableView extends TableView {
-    private LynxAppConfigColConfig columnConfig;
-    private LynxAppConfigWindow parentWindow;
+public class newTableView extends TableView {
+    private newColConfig columnConfig;
+    private newWindow parentWindow;
     public static final String BIZ_OBJECT = "lynx_app_config";
 
-    public LynxAppConfigTableView(boolean autoLoad, LynxAppConfigWindow parentWindow) {
+    public newTableView(boolean autoLoad, newWindow parentWindow) {
         super(autoLoad, parentWindow);
         this.parentWindow = parentWindow;
         setHistoryMode(true);
@@ -28,16 +28,16 @@ public class LynxAppConfigTableView extends TableView {
 
     @Override
     public BaseGridColumnConfig createColumnsConfig() {
-        columnConfig = new LynxAppConfigColConfig(this);
+        columnConfig = new newColConfig(this);
         return columnConfig;
     }
 
     @Override
     public BaseFieldsDef createFieldsDef() {
-        return new LynxAppConfigFieldsDef();
+        return new newFieldDef();
     }
 
-    public LynxAppConfigColConfig getColumnConfig() {
+    public newColConfig getColumnConfig() {
         return columnConfig;
     }
 } 

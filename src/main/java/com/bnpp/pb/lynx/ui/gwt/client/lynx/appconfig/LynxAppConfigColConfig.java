@@ -6,16 +6,16 @@ import com.bnpp.pb.common.coreui.gwt.client.gxt3.ui.grid.TableView;
 import com.sencha.gxt.widget.core.client.grid.ColumnConfig;
 import java.util.List;
 
-public class LynxAppConfigColConfig extends BaseGridColumnConfig {
-    public LynxAppConfigColConfig(TableView tableView) {
+public class newColConfig extends BaseGridColumnConfig {
+    public newColConfig(TableView tableView) {
         super(tableView);
     }
 
     @Override
     public List<ColumnConfig<ModelData<String>, ?>> createColumns() {
         final List<ColumnConfig<ModelData<String>, ?>> columnConfigs = createColumns(
-            LynxAppConfigFieldsDef.gridFieldNames,
-            LynxAppConfigFieldsDef.gridFieldNames
+            newFieldDef.gridFieldNames,
+            newFieldDef.gridFieldNames
         );
         setColumnProps("id", "Id", 60, true, true);
         setColumnProps("app_id", "App Id", 100, false, true);

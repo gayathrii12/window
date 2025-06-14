@@ -11,19 +11,19 @@ import com.sencha.gxt.core.client.util.Margins;
 import com.google.gwt.user.client.ui.IsWidget;
 import java.util.EnumSet;
 
-public class LynxAppConfigWindow extends TableWindow {
-    private static LynxAppConfigWindow instance;
+public class newWindow extends TableWindow {
+    private static newWindow instance;
     private FramedPanel panel;
-    private LynxAppConfigForm form;
+    private newForm form;
 
-    public static LynxAppConfigWindow getInstance() {
+    public static newWindow getInstance() {
         if (instance == null) {
-            instance = new LynxAppConfigWindow();
+            instance = new newWindow();
         }
         return instance;
     }
 
-    private LynxAppConfigWindow() {
+    private newWindow() {
         super();
     }
 
@@ -42,13 +42,13 @@ public class LynxAppConfigWindow extends TableWindow {
     }
 
     @Override
-    public LynxAppConfigProfile createProfile() {
-        return new LynxAppConfigProfile(this);
+    public newProfile createProfile() {
+        return new newProfile(this);
     }
 
     @Override
-    public LynxAppConfigTableView createTableView() {
-        return new LynxAppConfigTableView(true, this);
+    public newTableView createTableView() {
+        return new newTableView(true, this);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class LynxAppConfigWindow extends TableWindow {
 
     @Override
     public IsWidget createPanel() {
-        this.form = new LynxAppConfigForm(getTableView().getParentWindow());
+        this.form = new newForm(getTableView().getParentWindow());
         form.init();
         form.setOperationCode(DataEntryForm.INSERT);
         GridPanel gridPanel = (GridPanel) super.createPanel();
