@@ -8,6 +8,11 @@ public class newFiltersBar extends FiltersBar {
     private StringFilter propNameFilter;
 
     @Override
+    public String getFilterPrefix() {
+        return "lynxAppConfig";
+    }
+
+    @Override
     public void create() {
         super.create();
         appIdFilter = new StringFilter();
