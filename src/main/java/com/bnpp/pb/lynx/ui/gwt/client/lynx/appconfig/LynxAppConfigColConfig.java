@@ -5,10 +5,13 @@ import com.bnpp.pb.common.coreui.gwt.client.gxt3.grid.ModelData;
 import com.bnpp.pb.common.coreui.gwt.client.gxt3.ui.grid.TableView;
 import com.sencha.gxt.widget.core.client.grid.ColumnConfig;
 import java.util.List;
+import com.bnpp.pb.common.coreui.gwt.client.gxt3.ui.grid.GridFormatter;
 
 public class newColConfig extends BaseGridColumnConfig {
+    private GridFormatter formatter;
     public newColConfig(TableView tableView) {
         super(tableView);
+        this.formatter = new LynxAppConfigGridFormatter();
     }
 
     @Override
@@ -27,5 +30,17 @@ public class newColConfig extends BaseGridColumnConfig {
         setColumnProps("create_date", "Create Date", 100, false, true);
         setColumnProps("created_by", "Created By", 80, false, true);
         return columnConfigs;
+    }
+
+    @Override
+    public GridFormatter getGridFormatter() {
+        return formatter;
+    }
+}
+
+class LynxAppConfigGridFormatter implements GridFormatter {
+    @Override
+    public Object format(String field, Object value) {
+        return value;
     }
 } 
