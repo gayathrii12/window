@@ -61,6 +61,8 @@ public class newWindow extends TableWindow {
         this.form = new newForm(getTableView().getParentWindow());
         form.init();
         form.setOperationCode(DataEntryForm.INSERT);
+
+        // Create the grid panel
         GridPanel gridPanel = (GridPanel) super.createPanel();
         gridPanel.getGrid().getView().setForceFit(true);
 
@@ -70,19 +72,23 @@ public class newWindow extends TableWindow {
         viewPanel.add(gridPanel);
 
         VerticalLayoutContainer container = new VerticalLayoutContainer();
-        container.add(viewPanel, new VerticalLayoutContainer.VerticalLayoutData(1, .6d, new Margins(4)));
+        // Make the grid take 70% and the form 30% of the vertical space
+        container.add(viewPanel, new VerticalLayoutContainer.VerticalLayoutData(1, 0.7, new Margins(4)));
 
         panel = new FramedPanel();
         panel.setButtonAlign(BoxLayoutContainer.BoxLayoutPack.CENTER);
         panel.setHeading("Enter App Config");
         panel.setBodyBorder(true);
-        panel.setCollapsible(true);
-        panel.setPixelSize(500, 300);
         panel.setCollapsible(false);
+        panel.setPixelSize(500, 300);
         panel.setLayoutData(new MarginData(10));
         panel.setWidget(form.getPanel());
 
-        container.add(panel, new VerticalLayoutContainer.VerticalLayoutData(1, .4d, new Margins(4)));
+        container.add(panel, new VerticalLayoutContainer.VerticalLayoutData(1, 0.3, new Margins(4)));
+
+        // Force reload data to ensure grid is populated
+        getTableView().reload();
+
         return container;
     }
 } 
